@@ -1,36 +1,58 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Transjakarta Fleet Management System 🚍
 
-## Getting Started
+Aplikasi frontend untuk sistem manajemen armada Transjakarta, sebagai salah satu tes teknis Frontend Engineer.
 
-First, run the development server:
+## 🎯 Fitur
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- Autentikasi: Login & Register (dummy, tanpa backend)
+- Tampilan kendaraan dalam bentuk Card
+- Pagination dan filter (rute & trip)
+- Detail kendaraan dalam modal dialog
+- Peta lokasi kendaraan menggunakan Leaflet & OpenStreetMap
+- Loading indicator & error handling
+- Proteksi halaman Dashboard (harus login)
+- Responsif dan mobile friendly
+- Kode ditulis dalam **TypeScript** dan menggunakan **Next.js**, **Tailwind CSS**, **shadcn/ui**
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📂 Struktur Project
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+transjakarta-fleet/
+├── app/
+│ ├── (auth)/login
+│ ├── (auth)/register
+│ └── dashboard/
+├── components/
+│ ├── VehicleCard.tsx
+│ ├── Pagination.tsx
+│ ├── FilterDropdown.tsx
+│ ├── VehicleDetailModal.tsx
+│ └── LogoutButton.tsx
+├── hooks/usePagination.ts
+├── lib/api.ts
+├── lib/types.ts
+├── docs/SDLC.md
+├── docs/ARCHITECTURE.md
+├── styles/globals.css
+├── tailwind.config.ts
+├── tsconfig.json
+├── package.json
+└── README.md
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. Clone repo:
+   git clone https://github.com/yourusername/transjakarta-fleet.git
+   cd transjakarta-fleet
 
-## Learn More
+2. Install dependencies:
+    npm install
 
-To learn more about Next.js, take a look at the following resources:
+3. Jalankan development:
+    npm run dev
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+4. Buka browser:
+    - http://localhost:3000/register → daftar akun
+    - http://localhost:3000/login → login
+    - http://localhost:3000/dashboard → lihat armada
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+5. email & password
+    email : admin
+    password: admin
