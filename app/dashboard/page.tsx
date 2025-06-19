@@ -63,7 +63,9 @@ export default function DashboardPage() {
       <div className="ml-4 mt-4 mb-4">
     <LogoutButton />
   </div>
-
+<div className="mt-4 mb-4">
+  <h1 className="text=xl font-medium">pilih rute anda dengan klik halte yang tersedia di bawah</h1>
+</div>
       <FilterDropdown
         label="Filter Rute"
         url="https://api-v3.mbta.com/routes"
